@@ -1,0 +1,278 @@
+/* VARIABLES DE COLOR */
+:root {
+    --primary-color: #0077b6; /* Azul Océano */
+    --secondary-color: #023e8a; /* Azul Oscuro */
+    --accent-color: #ff9f1c; /* Naranja Atardecer */
+    --text-color: #333333;
+    --bg-light: #f0f4f8;
+    --white: #ffffff;
+    --shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HERO SECTION */
+.hero {
+    /* Imagen de fondo de viaje/paisaje */
+    background: linear-gradient(rgba(0, 30, 60, 0.7), rgba(0, 30, 60, 0.7)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.team-names {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.team-names p {
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 159, 28, 0.4);
+}
+
+.btn:hover {
+    background-color: #e0890b;
+    transform: translateY(-2px);
+}
+
+/* SECCIONES */
+section {
+    padding: 70px 0;
+}
+
+.intro {
+    text-align: center;
+    max-width: 900px;
+}
+
+.intro h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #d1d9e6;
+    margin: 0;
+}
+
+/* CABECERAS DE PROYECTO */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 14px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin: 15px 0 5px 0;
+}
+
+.section-header h3 {
+    font-size: 1.3rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* GRID LAYOUT */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Video area un poco más grande */
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: stretch;
+}
+
+/* TARJETAS (CARDS) */
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.technical-sheet ul {
+    list-style: none;
+}
+
+.technical-sheet li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.technical-sheet li:last-child {
+    border-bottom: none;
+}
+
+.technical-sheet strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* VIDEO AREA */
+.video-container {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    color: white;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.video-placeholder {
+    text-align: center;
+    opacity: 0.7;
+}
+
+.icon-play {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+video {
+    width: 100%;
+    max-height: 500px; /* Evita que los videos verticales ocupen toda la pantalla */
+    border-radius: 8px;
+    background: #000;
+}
+
+/* PROCESO Y PROMPTS */
+.process-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.process-box h4 {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.step {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #eee;
+}
+
+.step strong {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.prompt-box {
+    background-color: #282c34; /* Estilo editor de código oscuro */
+    color: #abb2bf;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.prompt-label {
+    display: block;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--secondary-color);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .team-names {
+        width: 100%;
+        padding: 15px;
+    }
+}
